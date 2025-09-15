@@ -1,0 +1,39 @@
+selection sort
+
+
+
+
+ #include <stdio.h> 
+void main() 
+{ 
+    int x,arr[100],i,n,pos,count,val,j,minx,minj; 
+     
+    printf("Enter the number of elements to be sorted: "); 
+    scanf("%d",&n); 
+    printf("\nEnter %d Numbers:\n", n);  
+    for (i = 0; i < n; i++) 
+    { 
+        scanf("%d",&arr[i]); 
+    } 
+               
+    for(i=0; i < n; i++) 
+    { 
+     minj=i;  
+     minx=arr[i]; 
+        for(j=i+1;j<n;j++) 
+        { 
+            if(arr[j]<minx) 
+            { 
+              minj=j; 
+              minx=arr[j];            
+            } 
+        } 
+     arr[minj]=arr[i]; 
+     arr[i]=minx;      
+    }     
+    printf("Sorted Array:\n");  
+    for(i=0;i<n;++i) 
+    { 
+        printf("%d  ",arr[i]); 
+    } 
+}
